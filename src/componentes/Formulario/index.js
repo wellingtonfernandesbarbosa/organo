@@ -1,8 +1,8 @@
-import CampoTexto from '../CampoTexto';
-import ListaSuspensa from '../ListaSuspensa';
-import Botao from '../Botao';
-import { useState } from 'react';
-import './Formulario.css';
+import CampoTexto from '../CampoTexto'
+import ListaSuspensa from '../ListaSuspensa'
+import Botao from '../Botao'
+import { useState } from 'react'
+import './Formulario.css'
 
 const Formulario = (props) => {
 
@@ -19,6 +19,10 @@ const Formulario = (props) => {
             imagem, 
             time
         })
+
+        setNome('')
+        setCargo('')
+        setImagem('')
     }
 
     return (
@@ -60,4 +64,4 @@ const Formulario = (props) => {
     )
 }
 
-export default Formulario;
+export default Formulario

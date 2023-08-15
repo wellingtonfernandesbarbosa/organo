@@ -1,14 +1,22 @@
-import './Time.css';
+import Colaborador from '../Colaborador'
+import './Time.css'
 
 const Time = (props) => {
-    const sectionStyles = { backgroundColor: props.corSecundaria };
-    const h3Styles = {color: props.corPrimaria};
+    const sectionStyles = { backgroundColor: props.corSecundaria }
+    const h3Styles = {color: props.corPrimaria}
 
     return (
-        <section className='time' style={sectionStyles}>
+        (props.colaboradores.length > 0) ? <section className='time' style={sectionStyles}>
             <h3 style={h3Styles}>{props.nome}</h3>
-        </section>
-    );
+            <div className='colaboradores'>
+                {props.colaboradores.map( colaborador => <Colaborador 
+                    nome={colaborador.nome}
+                    cargo={colaborador.cargo}
+                    imagem={colaborador.imagem}
+                />)}
+            </div>
+        </section> : ''
+    )
 }
 
-export default Time;
+export default Time
