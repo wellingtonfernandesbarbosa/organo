@@ -6,7 +6,7 @@ const Colaborador = ({nome, imagem, cargo}) => {
             <div className='cabecalho'>
                 <img src={imagem} alt=''></img>
             </div>
-            <div className='rodape'>
+            <div className='rodapeColaborador'>
                 <h4>{nome}</h4>
                 <h5>{cargo}</h5>
             </div>
