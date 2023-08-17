@@ -13,6 +13,7 @@ const Time = (props) => {
                     key={colaborador.nome} nome={colaborador.nome}
                     cargo={colaborador.cargo}
                     imagem={colaborador.imagem}
+                    corPrimaria={props.corPrimaria}
                 />)}
             </div>
         </section> : ''
