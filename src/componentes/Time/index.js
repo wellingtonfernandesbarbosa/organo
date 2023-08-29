@@ -3,7 +3,7 @@ import hexToRgba from "hex-to-rgba";
 import "./Time.css";
 
 const Time = ({ time, colaboradores, aoDeletar, mudarCor }) => {
-  const sectionStyles = { backgroundColor: hexToRgba(time.cor, '0.4') };
+  const sectionStyles = { backgroundColor: hexToRgba(time.cor, "0.6") };
   const h3Styles = { color: time.cor };
 
   return (
@@ -12,7 +12,7 @@ const Time = ({ time, colaboradores, aoDeletar, mudarCor }) => {
         <input
           type="color"
           className="input-color"
-          onChange={evento => mudarCor(evento.target.value, time.nome)}
+          onChange={(evento) => mudarCor(evento.target.value, time.id)}
           value={time.cor}
         />
         <h3 style={h3Styles}>{time.nome}</h3>
