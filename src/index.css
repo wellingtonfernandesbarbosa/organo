@@ -7,6 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.cabecalho-times {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  align-items: center;
+  margin: 0 30px;
+}
+
 .times {
   text-align: center;
 }
@@ -18,9 +25,26 @@ h1 {
   display: inline-block;
   padding-bottom: 24px;
   margin: 32px 0;
+  justify-self: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.enable-button {
+  justify-self: end;
+  width: 5.5rem;
+}
+
+.enable-button:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  .enable-button {
+    width: 4.5rem;
+  }
 }

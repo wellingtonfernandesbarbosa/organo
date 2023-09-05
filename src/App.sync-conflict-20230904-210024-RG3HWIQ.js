@@ -263,8 +263,6 @@ function App() {
     },
   ];
 
-  const [form, setForm] = useState(true);
-
   const [colaboradores, setColaboradores] = useState(inicial);
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
@@ -302,35 +300,18 @@ function App() {
     );
   }
 
-  function desativaFormulario() {
-    form ? setForm(false) : setForm(true);
-  }
-
   return (
     <div className="App">
       <Banner />
-      {form ? (
-        <Formulario
-          cadastrarTime={cadastrarTime}
-          times={times.map((time) => time.nome)}
-          aoColaboradorCadastrado={(colaborador) =>
-            aoNovoColaboradorAdicionado(colaborador)
-          }
-        />
-      ) : (
-        ""
-      )}
+      <Formulario
+        cadastrarTime={cadastrarTime}
+        times={times.map((time) => time.nome)}
+        aoColaboradorCadastrado={(colaborador) =>
+          aoNovoColaboradorAdicionado(colaborador)
+        }
+      />
       <section className="times">
-        <div className="cabecalho-times">
-          <div></div>
-          <h1>Minha organização</h1>
-          <img
-            className="enable-button"
-            onClick={desativaFormulario}
-            src="./imagens/enable.png"
-            alt="Botão para desativar e ativar o formulário"
-          ></img>
-        </div>
+        <h1>Minha organização</h1>
         {times.map((time, indice) => (
           <Time
             aoFavoritar={resolverFavorito}
